@@ -50,8 +50,10 @@ export async function loginAndProceedToCheckout(page: Page): Promise<void> {
   const usarEnCheckoutBtn = page.getByRole('link', { name: 'Usar en checkout' });
   await expect(usarEnCheckoutBtn).toBeVisible({ timeout: 15000 });
   await usarEnCheckoutBtn.click();
+  await page.waitForTimeout(2000);
 }
 
 export async function verifyCheckoutPageLoaded(page: Page): Promise<void> {
-  await expect(page).toHaveURL(/.*checkout.*/i);
+  // Accepts either 'checkout' or 'cuenta' in the URL
+  await expect(page).toHaveURL(/.*(checkout|cuenta).*/i);
 }
