@@ -18,13 +18,17 @@ export async function addProductsToCart(page: Page): Promise<void> {
   await expect(householdLink).toBeVisible();
   await householdLink.click();
 
+  await page.reload();
   await page.waitForTimeout(2000);
 
-  await page.getByRole('article').filter({ hasText: 'Menaje y Organización Abridor' }).getByRole('button').click();
-  await page.getByRole('article').filter({ hasText: 'Menaje y Organización Azucarero Blanco Mallorca CASA JOVEN S/ 14.19 Agregar Ir' }).getByRole('button').click();
-  await page.getByRole('article').filter({ hasText: 'Menaje y Organización Balde' }).getByRole('button').click();
-  await page.getByRole('article').filter({ hasText: 'Menaje y Organización Balde' }).getByRole('button').click();
+
+  await page.locator('button[data-add-to-cart][data-product-id="126706238"]').click();
+  await page.locator('button[data-add-to-cart][data-product-id="147132876"]').click();
+  await page.locator('button[data-add-to-cart][data-product-id="113380840"]').click();
+  await page.locator('button[data-add-to-cart][data-product-id="113380840"]').click();
   await page.waitForTimeout(2000);
+
+
 
   await page.getByRole('link', { name: 'Carrito 4' }).click();
 }
