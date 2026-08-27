@@ -31,7 +31,9 @@ jobs:
       run: npx playwright test
       env:
         # Passes environment variables from GitHub Secrets if your .env relies on them
-        BASE_URL: ${{ secrets['BASE_URL'] }}
+        BASE_URL: ${{ secrets.BASE_URL }}
+        APP_USERNAME: ${{ secrets.APP_USERNAME }}
+        APP_PASSWORD: ${{ secrets.APP_PASSWORD }}
 
     - name: Upload Playwright Report
       uses: actions/upload-artifact@v4
