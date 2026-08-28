@@ -1,0 +1,35 @@
+{
+  "planHash": "c2f4ca88134feba73a8cf0eb435dd108a288165bc6a74c9a5eb339a49cdbde6e",
+  "phase": "baseline",
+  "recordedAtUtc": "2026-08-28T19:59:56.3163449Z",
+  "retryCount": 0,
+  "resetBaseline": false,
+  "result": {
+    "setupSucceeded": true,
+    "setupDurationMs": 1322,
+    "setupFailureOutput": null,
+    "assertions": [
+      {
+        "name": "tests-pass",
+        "kind": "process",
+        "verificationMethod": "test-results",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "\u25C7 injected env (3) from .env // tip: \u2318 custom filepath { path: \u0027/custom/path/.env\u0027 }\r\n\r\nRunning 3 tests using 3 workers\r\n\r\n\u25C7 injected env (0) from .env // tip: \u2318 suppress logs { quiet: true }\r\n\r\n\u25C7 injected env (0) from .env // tip: \u2318 override existing { override: true }\r\n\r\n[1/3] [webkit] \u203A tests\\CheckoutFlow.spec.ts:9:7 \u203A Checkout Flow User Journey \u203A Verify User Can Complete Checkout Flow\r\n[2/3] [firefox] \u203A tests\\CheckoutFlow.spec.ts:9:7 \u203A Checkout Flow User Journey \u203A Verify User Can Complete Checkout Flow\r\n\u25C7 injected env (0) from .env // tip: \u2318 custom filepath { path: \u0027/custom/path/.env\u0027 }\r\n\r\n[3/3] [chromium] \u203A tests\\CheckoutFlow.spec.ts:9:7 \u203A Checkout Flow User Journey \u203A Verify User Can Complete Checkout Flow\r\n  3 passed (24.0s)\r\n",
+        "durationMs": 25466,
+        "testResults": {
+          "testFramework": "unknown",
+          "runnerDetectedFrom": "none",
+          "testsTotal": 0,
+          "testsPassed": 0,
+          "testsFailed": 0,
+          "testsSkipped": 0,
+          "parseFailed": true
+        }
+      }
+    ]
+  }
+}
