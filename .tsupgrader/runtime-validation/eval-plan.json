@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-08-29T03:56:56Z",
+  "generatedOnPlatform": "win32",
+  "projectType": "library",
+  "setup": [
+    {
+      "command": "npm",
+      "args": ["install"]
+    }
+  ],
+  "assertions": [
+    {
+      "name": "tests-pass",
+      "kind": "process",
+      "command": "npx",
+      "args": ["playwright", "test"],
+      "verificationMethod": "test-results",
+      "expected": "0",
+      "timeoutSeconds": 300
+    }
+  ]
+}
